@@ -31,9 +31,9 @@ if __name__ == '__main__':
             new_arr.append(item)
 
     print(new_arr)
-    maximum = float('inf')
+    minimum = float('inf')
 
     for i in range(len(new_arr)):
-        maximum = min(sum_of_array - 2 * new_arr[i], maximum)
+        minimum = min(sum_of_array - 2 * new_arr[i], minimum)
 
-    print(maximum)
+    print(minimum)
