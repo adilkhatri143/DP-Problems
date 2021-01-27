@@ -1,3 +1,6 @@
+import random
+
+
 def countSubset(arr, n, s):
     lookupTable = [[0 for i in range(s+1)] for j in range(n+1)]
 
@@ -19,7 +22,7 @@ def countSubset(arr, n, s):
 
 
 if __name__ == '__main__':
-    arr = [2, 3, 5, 8, 10, 5, 5]
-    s = 10
+    arr = [random.randint(10, 1000) for i in range(10000)]
+    s = 5222
     n = len(arr)
     print(countSubset(arr, n, s))

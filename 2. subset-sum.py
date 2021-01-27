@@ -7,7 +7,6 @@ dp = []
 
 def initializeTable(n, s):
     global dp
-    dp = []
     dp = [[False for sum in range(s+1)] for item in range(n+1)]
 
 
@@ -29,7 +28,7 @@ def subsetSum(arr, n, s):
 
 
 def subsetSumIter(arr, n, s):
-    lookupTable = [[False for sum in range(s+1)] for item in range(n+1)]
+    lookupTable = [[False for i in range(s+1)] for j in range(n+1)]
 
     for item in range(s+1):
         lookupTable[0][item] = False
@@ -49,14 +48,14 @@ def subsetSumIter(arr, n, s):
 
 
 if __name__ == '__main__':
-    arr = [random.randint(10, 1000) for i in range(20000)]
-    s = 52220
+    arr = [random.randint(10, 1000) for i in range(10000)]
+    s = 5222
     n = len(arr)
     # Recursive
-    initializeTable(n, s)
-    start = time.time()
-    print(subsetSum(arr, n, s))
-    print(time.time() - start)
+    # initializeTable(n, s)
+    # start = time.time()
+    # print(subsetSum(arr, n, s))
+    # print(time.time() - start)
     # Iterative
     start = time.time()
     print(subsetSumIter(arr, n, s))
