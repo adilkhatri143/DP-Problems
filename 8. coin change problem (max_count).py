@@ -43,8 +43,8 @@ def coinChangeIterative(arr, C, n):
 
 
 if __name__ == "__main__":
-    arr = [1, 2, 5, 10, 5, 2, 1, 5]
-    C = 1252
+    arr = [1, 2, 5, 1, 1, 5]
+    C = 6
     n = len(arr)
 
     # Recursive
