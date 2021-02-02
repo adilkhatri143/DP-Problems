@@ -33,7 +33,7 @@ def LCSLengthIter(x, y, n, m):
             else:
                 cache[i][j] = max(cache[i-1][j], cache[i][j-1])
 
-    return cache[n-1][m-1]
+    return cache[n][m]
 
 
 if __name__ == '__main__':
